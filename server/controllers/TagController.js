@@ -6,4 +6,7 @@ const TagController = {
         res.status(200).send({ msg: "Game found", games: games });
       else {
         res.status(404).send({ msg: "Game not found" });
-      })
+      }})
+    }
+
+    module.exports = TagController;

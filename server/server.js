@@ -14,7 +14,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/games", gameRoutes);
-app.use("api/tags", TagRoutes);
+app.use("/api/tags", TagRoutes);
 
 app.get("/", (req, res) => {
     res.send("hallo");
