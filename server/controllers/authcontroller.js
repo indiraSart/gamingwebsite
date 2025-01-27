@@ -21,7 +21,7 @@ const authController = {
         let hashedPassword = user.password;
         const isPassword = await bcrypt.compare(password, hashedPassword);
         console.log(isPassword);
-        createcookie(res, jwtToken)
+        await createcookie(res, jwtToken)
 
         if (isPassword) {
             const jwtToken = createJwt(email,role);
@@ -42,8 +42,6 @@ const authController = {
     }),
 
 
-
-
     register: ((req, res) => {
         //res.send("register")
         const { email, password, repeatPassword } = req.body;
@@ -52,7 +50,7 @@ const authController = {
         let role = "user";
 
         if(password === repeatPassword) {
-            bcrypt.hash(password, saltRounds, function(err, hash){
+            bcrypt.hash(password, saltRounds, async function(err, hash){
 
                 if (err) console.log(err, "error");
                 

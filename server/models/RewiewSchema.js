@@ -1,4 +1,4 @@
-const moongose = require("mongoose");
+const mongoose = require("mongoose");
 
 const{Schema, model } = mongoose;
 
@@ -18,6 +18,6 @@ const reviewSchema = new Schema ({
 
 })
 
-const Review = model("Review", userSchema);
+const Review = model("Review", reviewSchema);
 
-module.exports = Tag;
+module.exports = Review;
