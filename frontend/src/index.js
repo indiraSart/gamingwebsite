@@ -6,15 +6,18 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 //import reportWebVitals from './reportWebVitals';
+import AuthProvider from './auth/Authcontext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <React.StrictMode>  
+    <AuthProvider>
     <BrowserRouter>
     <Navbar/>
     <App />
     <Footer></Footer>
     </BrowserRouter>
+    </AuthProvider>
   </React.StrictMode>
 );
 

@@ -43,15 +43,15 @@ const gameController = {
         .send({ msg: "Something happened when creating the game" });
     }
   },
-  getGame: (req, res) => {
-    const { id } = req.params;
+    getGame: async (req, res) => {
+      const { id } = req.params;
+      console.log("id", id)
+      const game = await Game.findOne({_id: id});
 
-    const game = Game.findById(id);
+      console.log(game);
 
-    console.log(game);
-
-    ret.status(200).send({ msg: "Game retrieved", game: game });
-  },
+      res.status(200).send({ msg: "Game retrieved", game: game });
+    },
   editGame: async (req, res) => {
     const { id } = req.params;
     const updateContent  = req.body;

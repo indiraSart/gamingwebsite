@@ -5,6 +5,10 @@ import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NotFound from './pages/NotFound';
+import Profile from "./pages/Profile"
+import CreateGame from './pages/CreateGame';
+import GamePage from './pages/GamePage';
+import IndividualGame from './pages/IndividualGame';
 
 function App() {
   return (
@@ -12,7 +16,14 @@ function App() {
       <Routes>
         <Route path ="/" element={<LandingPage/>}></Route>
         <Route path ="/login" element={<Login/>}></Route>
-        <Route path ="/Register" element={<Register/>}></Route>
+        <Route path ="/register" element={<Register/>}></Route>
+        <Route path="/profile" element={<Profile/>}></Route>
+        <Route path="/createGame" element={<CreateGame/>}></Route>
+        <Route path="/games" element={<GamePage/>}></Route>
+        <Route path="/games/:id" element={<IndividualGame/>}></Route>
+
+
+        
 
 
 

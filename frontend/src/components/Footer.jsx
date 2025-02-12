@@ -14,9 +14,9 @@ export default function Footer() {
                 <p><a href="#">About us</a></p>
             </div>
             <div>
-                <p><a href="#">Logg in</a></p>
-                <p><a href="#">Registrer</a></p>
-                <p><a href="#">About us</a></p>
+                <p><a href="contact">contact us</a></p>
+                <p><a href=""></a>see our new games</p>
+                <p><a href=""></a>join our nettsetler</p>
             </div>
 
 

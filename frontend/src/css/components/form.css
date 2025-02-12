@@ -2,3 +2,29 @@ form {
     display: flex;
     width: 600%;
 }
+
+input, textarea {
+    padding: 10px 4px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+
+}
+
+button {
+    padding:10px 40epx;
+    
+
+}
+.gameform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    justify-self: center;
+}
+
+.gameform form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

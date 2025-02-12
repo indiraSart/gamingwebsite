@@ -23,6 +23,6 @@ const gameSchema = new Schema({
   reviews: { type: Array },
 });
 
-const game = model("game", gameSchema);
+const Game = model("Game", gameSchema);
 
-module.exports = game;
+module.exports = Game;
